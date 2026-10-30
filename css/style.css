@@ -1,0 +1,17 @@
+/*--------------------------
+    Estilos generales   
+---------------------------*/
+
+html{
+    /* width es el del content + padding + border */
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
