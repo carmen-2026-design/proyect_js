@@ -1,3 +1,5 @@
+// import { isInFavorites } from "../utils/localStorage.js";
+
 class Character{
     constructor(data){
         this.name = data.name;
@@ -18,3 +20,5 @@ class Character{
         this.image = data.image;
     }
 }
+
+export default Character;

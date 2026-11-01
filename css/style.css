@@ -1,9 +1,5 @@
-/*--------------------------
-    Estilos generales   
----------------------------*/
-
+/* Estilos generales */
 html{
-    /* width es el del content + padding + border */
     box-sizing: border-box;
 }
 
