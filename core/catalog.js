@@ -63,6 +63,3 @@ function setHousesOptions(catalog) {
 loadFilterForm();
 loadCatalog();
 
-
-
-
