@@ -82,7 +82,7 @@ html{
 
 /* Favorito activo */
 .btn-fav.fav-active {
-    color: red;
+    color: rgb(143, 10, 10);
 }
 
 /* Página para móviles */

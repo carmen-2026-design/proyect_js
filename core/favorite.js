@@ -6,11 +6,14 @@ function loadFavorites(){
 
     const container = document.getElementById("favorite-section");
 
-    favorites.forEach(function (character) {
-        const card = createFavoriteCard(character, true);
+    favorites.forEach(character => {
+        const card = createFavoriteCard(character, (c,isFavorite) => {
+            if (!isFavorite){
+                card.remove();
+            }
+        });
         container.appendChild(card);
-
-    });
+    })
 }
 
 loadFavorites();
