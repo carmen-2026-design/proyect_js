@@ -9,7 +9,7 @@ function loadFilterForm(){
     container.append(form);
 }
 
-async function loadCatalog(){
+async function loadCatalog(search= "",house="all"){
     const response = await getCatalog();
     
     if (response.error)
@@ -21,11 +21,23 @@ async function loadCatalog(){
     const catalog = response.data.map(c => new Character(c))
     console.log(catalog);
 
-    //Muestra las fichas del catálogo
-    showCatalog(catalog);
+    const filteredCatalog = catalog.filter(character =>{
+        //filtrar por nombre
+        if (search){
+            if(!character.name.toLowerCase().includes(search.toLowerCase()))
+                return false;
+        }
+        //filtrar por casa
+        if (house !== "all"){
+            if(!(character.house || "").includes(house)){
+                return false;
+            }
+        }
+        return true;
+    });
 
-    //Carga en el filtro de casas las del catálogo
-    setHousesOptions(catalog);
+    //Muestra las fichas del catálogo
+    showCatalog(filteredCatalog);
 }
 
 function showCatalog(catalog){
@@ -38,28 +50,45 @@ function showCatalog(catalog){
     });
 }
 
-function getHouses(catalog){
-    const housesSet = new Set();
-    catalog.forEach(c => {
-        housesSet.add(c.house);
+function setSearchForm(){
+    const form = document.getElementById("filter-form");
+    form.addEventListener("submit",(event)=>{
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const search = formData.get("name").toLowerCase().trim();
+        const house = formData.get("house");
+        loadCatalog(search,house);
     })
-    const houses = Array.from(housesSet);
-    return houses;
 }
 
-function setHousesOptions(catalog) {
-    const houses = getHouses(catalog);
-    console.log(houses);
-    const selector = document.getElementById("house-select");
-    const options = houses.map(h => {
-        const option = document.createElement("option");
-        option.value = h;
-        option.textContent = h;
-        return option;
-    })
-    selector.append(...options);
+function controlSearchQuery(){
+    const searchInput = document.getElementById("name-input");
+    const houseSelector = document.getElementById("house-select");
+    let timeout = null;
+
+    //buscar al escribir en el input
+    searchInput.addEventListener("input",(e)=>{
+        clearTimeout(timeout);
+        timeout = setTimeout(()=>{
+            const search  = e.target.value.toLocaleLowerCase().trim();
+            const house = houseSelector.value;
+            loadCatalog(search, house);
+        },500)
+    });
+
+    //buscar al cambiar de casa
+    houseSelector.addEventListener("change", () => {
+        const search = searchInput.value.toLowerCase().trim();
+        const house = houseSelector.value;
+        loadCatalog(search, house);
+    });
 }
 
+//crear form de filtros
 loadFilterForm();
+//asignar eventos
+setSearchForm();
+controlSearchQuery();
+//cargar catálogo
 loadCatalog();
 

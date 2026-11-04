@@ -4,7 +4,7 @@ import { createFavoriteCard } from "../ui/renderer.js";
 function loadFavorites(){
     const favorites = getFavoritesFromLocalStorage(); // Array con los objetos guardados en el localStorage
 
-    const container = document.getElementById("favorite-section");
+    const container = document.getElementById("catalog-section");
 
     favorites.forEach(character => {
         const card = createFavoriteCard(character, (c,isFavorite) => {

@@ -10,4 +10,118 @@ html{
     margin: 0;
     padding: 0;
     text-decoration: none;
+    list-style: none;
 }
+
+/* Header */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #140b70;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+header ul {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    gap: 10px;
+}
+
+header p{
+    color:#9b9a9a;
+    font-size: 20px;
+}
+
+nav{
+    font-size: 30px;
+}
+
+nav a{
+    color:#b9d612;
+}
+
+/* Main */
+main{
+    font-family: 'Fauna One', serif;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #9b9a9a;
+    background-color: #070331;
+    padding-top: 20px;
+    padding-left: 50px ;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 700;
+    color: #b69c0a;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h4{
+    margin-bottom: 30px;
+}
+
+/* Información de las 4 casas */
+#house-section{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    gap: 40px;   
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+}
+
+.gry-card{
+    border: 1px solid #D3A625;
+    border-radius: 15px;
+    background-color: #740001; 
+    box-shadow: 0 5px 10px #D3A625;
+    padding: 20px;
+}
+
+.sly-card{
+    border: 1px solid #5D5D5D;
+    border-radius: 15px;
+    background-color: #1A472A; 
+    box-shadow: 0 5px 10px #5D5D5D;
+    padding: 20px;
+}
+
+.rav-card{
+    border: 1px solid #946B2D;
+    border-radius: 15px;
+    background-color: #0E1A40; 
+    box-shadow: 0 5px 10px #946B2D;
+    padding: 20px;
+}
+
+.huf-card{
+    border: 1px solid #000000;
+    border-radius: 15px;
+    background-color: #706209; 
+    box-shadow: 0 5px 10px #000000;
+    padding: 20px;
+}
+
+/* Footer */
+footer{
+    padding: 50px;
+    background-color: #140b70;
+    color:#9b9a9a;
+    font-size: 20px;
+}
+
+
