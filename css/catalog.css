@@ -1,4 +1,4 @@
-/*Estilos generales*/
+/* ------------- Estilos generales -------------- */
 html{
     box-sizing: border-box;
 }
@@ -10,9 +10,128 @@ html{
     margin: 0;
     padding: 0;
     text-decoration: none;
+    list-style: none;
 }
 
-/* Contenedor del catálogo */
+/* ------------------- Header --------------------- */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #140b70;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+header ul {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    gap: 10px;
+}
+
+header p{
+    color:#9b9a9a;
+    font-size: 20px;
+}
+
+nav{
+    font-size: 30px;
+}
+
+nav a{
+    color:#b9d612;
+}
+
+/* ------------------------- Main ------------------------ */
+main{
+    font-family: 'Fauna One', serif;
+    line-height: 1.6;
+    color: #9b9a9a;
+    background-color: #070331;
+    padding-top: 20px;
+    padding-left: 50px ;
+}
+
+h1, h2, h3{
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 700;
+    color: #b69c0a;
+    letter-spacing: 1px;
+}
+
+h1{
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h4{
+    font-size: 25px;
+    color: #070842;
+    margin-top: 10px;
+    margin-bottom: 3px;
+}
+
+h5{
+    font-size: 18px;
+    border: 1px solid #1114cf;
+    border-radius: 15px;
+    background-color: #737a05;
+}
+
+/* -------------- Contenedor de los filtros ----------------*/
+#filters-section {
+    width: fit-content;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+#filter-form {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+}
+
+#filter-form label {
+    font-weight: bold;
+}
+
+#name-input {
+    font-size: 20px;
+    padding: 8px 40px 8px 10px;
+}
+
+.search-container i {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#house-select {
+    font-size: 20px;
+    padding: 8px;
+} 
+
+/* ---------------------- Contenedor del catálogo ---------------*/
 #catalog-section {
     display: flex;
     flex-direction: row;
@@ -21,57 +140,52 @@ html{
     align-items: flex-start;
     gap: 20px;
     width: 100%;
-    padding: 20px;
+    /* padding: 20px; */
+    margin-top: 20px;
 }
 
 /* Tarjeta de cada personaje */
 .card-character {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     flex: 0 0 380px;
-    width: 380px;
-    max-width: 380px;
-    height: 530px;
-    box-sizing: border-box;
-    padding: 15px;
+    padding: 20px;
     border: 1px solid #ddd;
     border-radius: 15px;
-    background-color: #DCC7A1;
+    background-color: #a8941e;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    color:#140b70;
 }
 
 /* Efecto al pasar el ratón */
 #catalog-section .card-character:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 15px #a8941e;
 } 
 
 #catalog-section .card-character img {
     width: 100%;
-    height: 320px;
+    height: 300px;
     object-fit: contain;
 }
 
-#favorite-section .card-character .card-name {
-    margin-top: 10px;
-    text-align: center;
-}
-
-/* #favorite-section .card-character .card-house {
-    margin-top: 5px;
+/* #favorite-section .card-character .card-name {
+    margin-top: 1px;
     text-align: center;
 } */
+
+#catalog-section .card-character p {
+    font-size: 16px;
+}
 
 /* Botón de favoritos */
 .btn-fav {
     border: none;
     background: transparent;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 40px;
     color: #999;
-    margin-top: 10px;
     padding: 5px;
 }
 
@@ -82,10 +196,27 @@ html{
 
 /* Favorito activo */
 .btn-fav.fav-active {
-    color: rgb(143, 10, 10);
+    color: rgb(6, 7, 88);
 }
 
-/* Página para móviles */
+.card-house-fav {
+  display: flex;
+  justify-content:space-between; 
+  align-items: center;
+  margin-right: 10px;
+} 
+
+/* ------------------- Footer ------------------- */
+footer{
+    padding: 50px;
+    background-color: #140b70;
+    color:#9b9a9a;
+    font-size: 20px;
+}
+
+/* ---------------------------------------------------- */
+/* -----------------Página para móviles --------------- */
+/* ---------------------------------------------------- */
 @media (max-width: 600px) {
     #catalog-section {
         justify-content: center;

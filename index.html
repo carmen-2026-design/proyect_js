@@ -3,22 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harry Potter</title>
+    <title>HOGWARTS</title>
+    <!-- Preconexiones de las fuentes -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <!-- Fuentes -->
+    <link href="https://googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Fauna+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="css/variable.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Harry Potter World</h1>
+    <header class="class-header">
+        <div>
+            <h1>EL MUNDO MÁGICO DE HOGWARTS</h1>
+            <P>Descubre los secretos del mundo mágico de Hogwarts</P>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" title="Página de inicio">INICIO</a></li>
+                <li><a href="html/catalog.html" title="Catálogo de personajes">CATÁLOGO</a></li>
+                <li><a href="html/favorite.html" title="Favoritos">FAVORITOS</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <div class="ppal-catalog">
-            <div><a href="html/catalog.html" title="Catálogo de personajes">catalogo</a></div>
-        </div>
+        <h2>LAS CUATRO CASAS DE HOGWARTS</h2>
+        <P>Cada una fundada por los magos más grandes de la época para albergar distintas virtudes.</P>
+
+        <section id="house-section">
+            <div class="gry-card">
+                <h3><i class="fa-solid fa-shield-halved"></i> Gryffindor</h3>
+                <h4>Valor, Coraje y Caballería</h4>
+                
+                <p><strong>Elemento:</strong> Fuego <i class="fa-solid fa-fire"></i></p>
+                <p><strong>Colores:</strong> Escarlata y dorado</p>
+            </div>
+            <div class="sly-card">
+                <h3><i class="fa-solid fa-dragon"></i> Slytherin</h3>
+                <h4>Ambición, Astucia e Ingenio</h4>
+                
+                <p><strong>Elemento:</strong> Agua</p>
+                <p><strong>Colores:</strong> Verde y Plata</p>
+            </div>
+            <div class="rav-card">
+                <h3><i class="fa-solid fa-feather"></i> Ravenclaw</h3>
+                <h4>Sabiduría, Inteligencia y Aprendizaje</h4>
+                
+                <p><strong>Elemento:</strong> Aire</p>
+                <p><strong>Colores:</strong> Azul y Bronce</p>
+            </div>
+            <div class="huf-card">
+                <h3><i class="fa-solid fa-handshake"></i> Hufflepuff</h3>
+                <h4>Lealtad, Paciencia y Trabajo Duro</h4>
+                
+                <p><strong>Elemento:</strong> Tierra <i class="fa-solid fa-seedling"></i></p>
+                <p><strong>Colores:</strong> Amarillo y negro</p>
+            </div>
+        </section>
     </main>
     <footer>
-        <p>Footer index</p>
+        <p>Diseñado para amantes de la saga Harry Potter. Todos los elementos relacionados son marcas registradas de Warner Bros. Entertainment Inc. c 2026 MUNDO MÁGICO</p>
     </footer>
+    
     <script src="core/index.js"></script>
     
 </body>
