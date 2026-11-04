@@ -44,10 +44,11 @@ function showCatalog(catalog){
     const container = document.getElementById("catalog-section")
     container.innerHTML = "";
 
-    catalog.forEach(c => {
-        const card = createCharacterCard(c)
+    catalog.forEach(character => {
+        const card = createCharacterCard(character, (c,isFavorite) => {
+        });
         container.appendChild(card);
-    });
+    })
 }
 
 function setSearchForm(){

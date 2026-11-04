@@ -46,8 +46,7 @@ function createFilterForm(){
     return form;
 }
 
-
-function createCharacterCard(character){
+function createCharacterCard(character, onFavorite=()=>{}){
     //Datos del personaje
     const {image, name, house, wand, patronus} = character;
 
@@ -55,84 +54,23 @@ function createCharacterCard(character){
     card.classList.add('card-character');
     card.dataset.productId = name;
 
+    const imageUrl = image ? image : "../img/wizard.jpg";
+        
     const cardImage = document.createElement('img');
-    cardImage.setAttribute("src", image);
+    cardImage.setAttribute("src", imageUrl);
     cardImage.setAttribute("alt", `image of ${name}`);
 
     const cardName = document.createElement('h4');
     cardName.textContent = name;
     cardName.classList.add('card-name');
 
+    const txtWand = wand.wood ? wand.wood + ", " + wand.core + ", " + wand.length + " pulgadas" : "No tiene";
     const cardWand = document.createElement('p');
-    cardWand.textContent = 'Varita: ' + wand.wood + ", " + wand.core + ", " + wand.length + " pulgadas";
+    cardWand.textContent = "Varita: " + txtWand;
 
+    const txtPatronus = patronus ? patronus: "No tiene";
     const cardPatronus = document.createElement('p');
-    cardPatronus.textContent = 'Patronus: ' + patronus;
-
-    const cardHouse = document.createElement('h5');
-    cardHouse.textContent = house;
-    cardHouse.classList.add('card-house');
-     
-    //Botón de favorito 
-    const favBtn = document.createElement("button"); 
-    favBtn.type = "button";
-    favBtn.classList.add("btn-fav");
-    favBtn.setAttribute("aria-label", `Añadir ${name} a favoritos`)
-    const icon = document.createElement('i');
-
-    let isFavorite = isInFavorites(character);
-    if (isFavorite) {
-        icon.className = "fa-solid fa-heart";
-        favBtn.classList.add("fav-active");
-    } 
-    else {
-        icon.className = "fa-regular fa-heart";
-    }
-    favBtn.appendChild(icon);
-
-    const cardHouseFav = document.createElement('div');
-    cardHouseFav.classList.add('card-house-fav');
-    cardHouseFav.append(cardHouse, favBtn);
-
-    //Evento click del botón favorito
-    favBtn.addEventListener("click", () => {
-        // Alterna en el localStorage y devuelve true (añadido) o false (eliminado)
-        const isFav = toggleFavorites(character); 
-        if (isFav) {
-            icon.className = "fa-solid fa-heart";
-            favBtn.classList.add("fav-active");
-        } else {
-            icon.className = "fa-regular fa-heart";
-            favBtn.classList.remove("fav-active");
-        }
-    });
-    
-    card.append(cardImage, cardName, cardWand, cardPatronus, cardHouseFav);
-    return card;
-}
-
-
-function createFavoriteCard(character, onFavorite=()=>{}){
-    //Datos del personaje
-    const {image, name, house, wand, patronus} = character;
-
-    const card = document.createElement('article');
-    card.classList.add('card-character');
-    card.dataset.productId = name;
-
-    const cardImage = document.createElement('img');
-    cardImage.setAttribute("src", image);
-    cardImage.setAttribute("alt", `image of ${name}`);
-
-    const cardName = document.createElement('h4');
-    cardName.textContent = name;
-    cardName.classList.add('card-name');
-
-    const cardWand = document.createElement('p');
-    cardWand.textContent = 'Varita: ' + wand.wood + ", " + wand.core + ", " + wand.length + " pulgadas";
-
-    const cardPatronus = document.createElement('p');
-    cardPatronus.textContent = 'Patronus: ' + patronus;
+    cardPatronus.textContent = 'Patronus: ' + txtPatronus;
 
     const cardHouse = document.createElement('h5');
     cardHouse.textContent = house;
@@ -176,64 +114,9 @@ function createFavoriteCard(character, onFavorite=()=>{}){
     
     card.append(cardImage, cardName, cardWand, cardPatronus, cardHouseFav);
     return card;
-
-    // //Datos del personaje
-    // const {image, name, house} = character;
-
-    // const card = document.createElement('article');
-    // card.classList.add('card-character');
-    // card.dataset.productId = name;
-
-    // const cardImage = document.createElement('img');
-    // cardImage.setAttribute("src", image);
-    // cardImage.setAttribute("alt", `image of ${name}`);
-
-    // const cardName = document.createElement('h2');
-    // cardName.textContent = name;
-    // cardName.classList.add('card-name');
-
-    // const cardHouse = document.createElement('p');
-    // cardHouse.textContent = house;
-    // cardHouse.classList.add('card-house');
-
-    // //Botón de favorito 
-    // const favBtn = document.createElement("button"); 
-    // favBtn.type = "button";
-    // favBtn.classList.add("btn-fav");
-    // favBtn.setAttribute("aria-label", `Añadir ${name} a favoritos`)
-    // const icon = document.createElement('i');
-
-    // let isFavorite = isInFavorites(character);
-    // if (isFavorite) {
-    //     icon.className = "fa-solid fa-heart";
-    //     favBtn.classList.add("fav-active");
-    // } 
-    // else {
-    //     icon.className = "fa-regular fa-heart";
-    // }
-    // favBtn.appendChild(icon);
-
-    // //Evento click del botón favorito
-    // favBtn.addEventListener("click", () => {
-    //     // Alterna en el localStorage y devuelve true (añadido) o false (eliminado)
-    //     const isFav = toggleFavorites(character); 
-    //     if (isFav) {
-    //         icon.className = "fa-solid fa-heart";
-    //         favBtn.classList.add("fav-active");
-    //         onFavorite(character, true);
-    //     } else {
-    //         icon.className = "fa-regular fa-heart";
-    //         favBtn.classList.remove("fav-active");
-    //         onFavorite(character, false);
-    //     }
-    // });
-    
-    // card.append(cardImage, cardName, cardHouse, favBtn);
-    // return card;
 }
 
 export {
     createFilterForm,
-    createCharacterCard,
-    createFavoriteCard
+    createCharacterCard
 }
