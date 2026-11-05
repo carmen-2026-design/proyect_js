@@ -67,7 +67,7 @@ function createCharacterCard(character, onFavorite=()=>{}){
     const cardWand = document.createElement('p');
     const iconWand = document.createElement('i');
     iconWand.className = "fa-solid fa-wand-sparkles";
-    const txtWand = wand.wood ? wand.wood + ", " + wand.core + ", " + wand.length + " pulgadas" : "No tiene";
+    const txtWand = wand.wood ? wand.wood + ", " + wand.core + ", " + wand.length + "\"" : "No tiene";
     const textoWand = " Varita: " + txtWand;
     cardWand.append(iconWand, textoWand);
 
