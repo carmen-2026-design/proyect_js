@@ -82,6 +82,17 @@ function createCharacterCard(character, onFavorite=()=>{}){
     const txtHouse = (house != '') ? house: "Sin casa"
     const cardHouse = document.createElement('h5');
     cardHouse.textContent = txtHouse;
+    let colorHouse = getComputedStyle(document.documentElement).getPropertyValue('--color-house').trim();
+    if (txtHouse.toLowerCase() == 'gryffindor')
+        colorHouse = getComputedStyle(document.documentElement).getPropertyValue('--color-gry').trim();
+    else if (txtHouse.toLowerCase() == 'slytherin')
+        colorHouse = getComputedStyle(document.documentElement).getPropertyValue('--color-sly').trim();
+    else if (txtHouse.toLowerCase() == 'ravenclaw')
+        colorHouse = getComputedStyle(document.documentElement).getPropertyValue('--color-rav').trim();
+    else if (txtHouse.toLowerCase() == 'hufflepuff')
+        colorHouse = getComputedStyle(document.documentElement).getPropertyValue('--color-huf').trim();
+
+    cardHouse.style.backgroundColor = colorHouse;
     cardHouse.classList.add('card-house');
      
     //Botón de favorito 
