@@ -1,0 +1,30 @@
+{
+  "patronus": {
+    "stag": "Ciervo",
+    "otter": "Nutria",
+    "jack russell terrier": "Terrier Jack Russell",
+    "persian cat": "Gato persa",
+    "hare": "Liebre",
+    "swan": "Cisne",
+    "lynx": "Lince",
+    "non-corporeal": "No corpóreo",
+    "horse": "Caballo",
+    "wolf": "Lobo"
+  },
+  "wood": {
+    "holly": "Acebo",
+    "vine": "Vid",
+    "willow": "Sauce",
+    "hawthorn": "Espino",
+    "yew": "Tejo",
+    "oak": "Roble",
+    "mahogany": "Caoba",
+    "walnut": "Nogal"
+  },
+  "core": {
+    "phoenix feather": "Pluma de fénix",
+    "dragon heartstring": "Nervio de corazón de dragón",
+    "unicorn hair": "Pelo de unicornio",
+    "veela hair": "Cabello de Veela"
+  }
+}
