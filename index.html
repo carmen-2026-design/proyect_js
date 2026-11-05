@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOGWARTS</title>
-    <!-- Preconexiones de las fuentes -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+
     <!-- Fuentes -->
-    <link href="https://googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Fauna+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Fauna+One&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="css/variable.css">
     <link rel="stylesheet" href="css/style.css">
@@ -17,10 +18,14 @@
     <header class="class-header">
         <div>
             <h1>EL MUNDO MÁGICO DE HOGWARTS</h1>
-            <P>Descubre los secretos del mundo mágico de Hogwarts</P>
+            <P>DESCUBRE LOS SECRETOS DEL MUNDO MÁGICO DE HOGWARTS</P>
         </div>
         <nav>
-            <ul>
+            <!-- Botón hamburguesa -->
+            <button id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul id="nav-menu">
                 <li><a href="index.html" title="Página de inicio">INICIO</a></li>
                 <li><a href="html/catalog.html" title="Catálogo de personajes">CATÁLOGO</a></li>
                 <li><a href="html/favorite.html" title="Favoritos">FAVORITOS</a></li>
@@ -43,21 +48,21 @@
                 <h3><i class="fa-solid fa-dragon"></i> Slytherin</h3>
                 <h4>Ambición, Astucia e Ingenio</h4>
                 
-                <p><strong>Elemento:</strong> Agua</p>
+                <p><strong>Elemento:</strong> Agua <i class="fa-solid fa-water"></i></p>
                 <p><strong>Colores:</strong> Verde y Plata</p>
             </div>
             <div class="rav-card">
                 <h3><i class="fa-solid fa-feather"></i> Ravenclaw</h3>
                 <h4>Sabiduría, Inteligencia y Aprendizaje</h4>
                 
-                <p><strong>Elemento:</strong> Aire</p>
+                <p><strong>Elemento:</strong> Aire <i class="fa-solid fa-wind"></i></p>
                 <p><strong>Colores:</strong> Azul y Bronce</p>
             </div>
             <div class="huf-card">
                 <h3><i class="fa-solid fa-handshake"></i> Hufflepuff</h3>
                 <h4>Lealtad, Paciencia y Trabajo Duro</h4>
                 
-                <p><strong>Elemento:</strong> Tierra <i class="fa-solid fa-seedling"></i></p>
+                <p><strong>Elemento:</strong> Tierra <i class="fa-solid fa-mountain"></i></p>
                 <p><strong>Colores:</strong> Amarillo y negro</p>
             </div>
         </section>
