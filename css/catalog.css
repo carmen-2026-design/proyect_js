@@ -55,8 +55,8 @@ main{
     font-family: var(--font-text);
     font-size: 20px;
     line-height: 1.6;
-    color: #9b9a9a;
-    background-color: #050224;
+    color: var(--color-text);
+    background-color: var(--color-main);
     padding-top: 20px;
     padding-left: 50px ;
 }
@@ -96,7 +96,7 @@ h5{
     font-size: 18px;
     border: 1px solid var(--color-house-border);
     border-radius: 15px;
-    background-color: var(--color-house);
+    color: var(--color-text);
     padding: 3px;
 }
 
@@ -247,7 +247,7 @@ footer{
     padding: 50px;
     background-color: var(--color-footer);
     color:var(--color-text);
-    font-size: 20px;
+    font-size: 18px;
 }
 
 /* ------------- Ocultar botón en portátil --------- */
