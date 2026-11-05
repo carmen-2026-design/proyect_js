@@ -1,0 +1,220 @@
+/* ------------- Estilos generales -------------- */
+
+@import url("variable.css");
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* ------------------- Header --------------------- */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-header);
+    padding: 50px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+header ul {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    gap: 10px;
+}
+
+header p{
+    color:var(--color-text);
+    font-size: 22px;
+}
+
+nav{
+    font-family: var(--font-text);
+    font-size: 26px;
+}
+
+nav a{
+    color: var(--color-nav);
+}
+
+/* ------------------------- Main --------------------- */
+main{
+    font-family: var(--font-text);
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-main);
+    padding-top: 20px;
+    padding-left: 50px ;
+}
+
+body {
+    font-family: var(--font-text);
+}
+
+h1, h3{
+    font-family: var(--font-title);
+    font-weight: 700;
+    color: var(--color-title);
+    letter-spacing: 1px;
+}
+
+h1{
+    font-size: 40px;
+}
+
+h2 {
+    font-family: var(--font-text);
+    color: var(--color-title);
+    letter-spacing: 1px;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h4{
+    font-size: 25px;
+    color: var(--color-title);
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+
+/* -------------- Información de las 4 casas ---------------- */
+#house-section{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    gap: 40px;   
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-right: 60px;
+}
+
+.gry-card{
+    border: 1px solid var(--color-gry-sec);
+    border-radius: 15px;
+    background-color: var(--color-gry); 
+    box-shadow: 0 5px 10px var(--color-gry-sec);
+    padding: 20px;
+}
+
+.sly-card{
+    border: 1px solid var(--color-sly-sec); 
+    border-radius: 15px;
+    background-color: var(--color-sly); 
+    box-shadow: 0 5px 10px var(--color-sly-sec); 
+    padding: 20px;
+}
+
+.rav-card{
+    border: 1px solid var(--color-rav-sec);
+    border-radius: 15px;
+    background-color: var(--color-rav);
+    box-shadow: 0 5px 10px var(--color-rav-sec);
+    padding: 20px;
+}
+
+.huf-card{
+    border: 1px solid var(--color-huf-sec);
+    border-radius: 15px;
+    background-color: var(--color-huf);
+    box-shadow: 0 5px 10px var(--color-huf-sec);
+    padding: 20px;
+}
+
+/* Footer */
+footer{
+    padding: 50px;
+    background-color: var(--color-footer);
+    color:var(--color-text);
+    font-size: 18px;
+}
+
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-nav);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* ---------------------------------------------------- */
+/* -----------------Página para móviles --------------- */
+/* ---------------------------------------------------- */
+@media screen and (max-width: 768px) {
+    /* Header en vertical */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px;
+    }
+
+    /* Título adaptable */
+    h1 {
+        font-size: 25px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    /* Contenedor navegación */
+    nav {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    /* Mostrar hamburguesa */
+    #menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    /* Menú oculto inicialmente */
+    header ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    /* Menú desplegado */
+    header ul.active {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 20px;
+    }
+
+    /* Adaptar contenido principal */
+    main {
+        padding: 20px;
+    }
+
+    #house-section {
+        grid-template-columns: 1fr;
+        padding: 30px 0;
+        gap: 25px;
+    }
+
+    footer {
+        padding: 25px;
+        font-size: 14px;
+    }
+}

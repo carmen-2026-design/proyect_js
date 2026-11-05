@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOGWARTS</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Fauna+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/catalog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <header class="class-header">
+        <div>
+            <h1>EL MUNDO MÁGICO DE HOGWARTS</h1>
+            <P>DESCUBRE LOS SECRETOS DEL MUNDO MÁGICO DE HOGWARTS</P>
+        </div>
+        <nav>
+            <!-- Botón hamburguesa -->
+            <button id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Menú de navegación -->
+            <ul id="nav-menu">
+                <li><a href="../index.html" title="Página de inicio">INICIO</a></li>
+                <li><a href="catalog.html" title="Catálogo de personajes">CATÁLOGO</a></li>
+                <li><a href="favorite.html" title="Favoritos">FAVORITOS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr style="border: none; height: 2px; background-color: #d4af37; margin: 0;">
+    <main id="catalog-main">
+        <h2>CATÁLOGO</h2>
+        <h3>COMPENDIO DE BRUJAS Y MAGOS</h3>
+        <P>Explora los personajes del catálogo de Hogwards</P>
+        
+        <section id="filters-section"></section>
+        
+        <section id="pagination">
+            <button id="prev-button" disabled>Anterior</button>
+            <p id="page-info">Pag: <span id="current-page">1</span>/<span id="total-pages">1</span></p>
+            <button id="next-button">Siguiente</button>
+        </section>
+
+        <section id="catalog-section"></section>
+    </main>
+    <hr style="border: none; height: 2px; background-color: #d4af37; margin: 0;">
+    <footer>
+        <p>Diseñado para amantes de la saga Harry Potter. Todos los elementos relacionados son marcas registradas de Warner Bros. Entertainment Inc. c 2026 MUNDO MÁGICO</p>
+    </footer>
+    
+    <script type="module" src="../core/catalog.js"></script>
+    
+</body>
+</html>

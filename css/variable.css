@@ -1,0 +1,34 @@
+:root{
+    --color-header: #070333;
+    --color-footer:#070333;
+    --color-nav:#b9d612;
+
+    --color-main:#050224;
+    --color-title:#b69c0a;
+    --color-text: #997979;
+
+    --color-card:#a8941e;
+    --color-card-border: #ddd; 
+    --color-card-shadow: rgba(0, 0, 0, 0.12);
+    --color-card-title: #070842;
+    --color-card-text:#140b70;
+
+    --color-house:#737a05;
+    --color-house-border:#1114cf;
+
+    --color-fav-no-activ:#999;
+    --color-fav: rgb(6, 7, 88);
+
+    --color-gry:#740001;
+    --color-gry-sec:#D3A625;
+    --color-sly:#1A472A;
+    --color-sly-sec:#5D5D5D;
+    --color-rav:#0E1A40;
+    --color-rav-sec:#946B2D;
+    --color-huf:#e6d70b;
+    --color-huf-sec:#000000;
+
+    --font-title: 'Cinzel Decorative', serif;
+    --font-text: 'Fauna One', serif;
+  
+}
