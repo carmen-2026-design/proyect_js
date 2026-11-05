@@ -1,4 +1,7 @@
 /* ------------- Estilos generales -------------- */
+
+@import url("variable.css");
+
 html{
     box-sizing: border-box;
 }
@@ -18,7 +21,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #140b70;
+    background-color: var(--color-header);
     padding: 50px;
 }
 
@@ -35,38 +38,38 @@ header ul {
 }
 
 header p{
-    color:#9b9a9a;
-    font-size: 20px;
+    color:var(--color-text);
+    font-size: 22px;
 }
 
 nav{
-    font-family: 'Fauna One', serif;
-    font-size: 30px;
+    font-family: var(--font-text);
+    font-size: 26px;
 }
 
 nav a{
-    color:#b9d612;
+    color: var(--color-nav);
 }
 
 /* ------------------------- Main --------------------- */
 main{
-    font-family: 'Fauna One', serif;
-    font-size: 20px;
+    font-family: var(--font-text);
+    font-size: 18px;
     line-height: 1.6;
-    color: #9b9a9a;
-    background-color: #070331;
+    color: var(--color-text);
+    background-color: var(--color-main);
     padding-top: 20px;
     padding-left: 50px ;
 }
 
 body {
-    font-family: 'Fauna One', serif;
+    font-family: var(--font-text);
 }
 
-h1, h2, h3{
-    font-family: 'Cinzel Decorative', serif;
+h1, h3{
+    font-family: var(--font-title);
     font-weight: 700;
-    color: #b69c0a;
+    color: var(--color-title);
     letter-spacing: 1px;
 }
 
@@ -75,15 +78,18 @@ h1{
 }
 
 h2 {
+    font-family: var(--font-text);
+    color: var(--color-title);
+    letter-spacing: 1px;
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
 h4{
     font-size: 25px;
-    color: #b69c0a;
+    color: var(--color-title);
     margin-top: 10px;
-    margin-bottom: 3px;
+    margin-bottom: 6px;
 }
 
 /* -------------- Información de las 4 casas ---------------- */
@@ -97,50 +103,50 @@ h4{
 }
 
 .gry-card{
-    border: 1px solid #D3A625;
+    border: 1px solid var(--color-gry-sec);
     border-radius: 15px;
-    background-color: #740001; 
-    box-shadow: 0 5px 10px #D3A625;
+    background-color: var(--color-gry); 
+    box-shadow: 0 5px 10px var(--color-gry-sec);
     padding: 20px;
 }
 
 .sly-card{
-    border: 1px solid #5D5D5D;
+    border: 1px solid var(--color-sly-sec); 
     border-radius: 15px;
-    background-color: #1A472A; 
-    box-shadow: 0 5px 10px #5D5D5D;
+    background-color: var(--color-sly); 
+    box-shadow: 0 5px 10px var(--color-sly-sec); 
     padding: 20px;
 }
 
 .rav-card{
-    border: 1px solid #946B2D;
+    border: 1px solid var(--color-rav-sec);
     border-radius: 15px;
-    background-color: #0E1A40; 
-    box-shadow: 0 5px 10px #946B2D;
+    background-color: var(--color-rav);
+    box-shadow: 0 5px 10px var(--color-rav-sec);
     padding: 20px;
 }
 
 .huf-card{
-    border: 1px solid #000000;
+    border: 1px solid var(--color-huf-sec);
     border-radius: 15px;
-    background-color: #706209; 
-    box-shadow: 0 5px 10px #000000;
+    background-color: var(--color-huf);
+    box-shadow: 0 5px 10px var(--color-huf-sec);
     padding: 20px;
 }
 
 /* Footer */
 footer{
     padding: 50px;
-    background-color: #140b70;
-    color:#9b9a9a;
-    font-size: 20px;
+    background-color: var(--color-footer);
+    color:var(--color-text);
+    font-size: 18px;
 }
 
 #menu-toggle {
     display: none;
     background: none;
     border: none;
-    color: #b9d612;
+    color: var(--color-nav);
     font-size: 30px;
     cursor: pointer;
 }
