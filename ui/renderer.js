@@ -64,16 +64,24 @@ function createCharacterCard(character, onFavorite=()=>{}){
     cardName.textContent = name;
     cardName.classList.add('card-name');
 
-    const txtWand = wand.wood ? wand.wood + ", " + wand.core + ", " + wand.length + " pulgadas" : "No tiene";
     const cardWand = document.createElement('p');
-    cardWand.textContent = "Varita: " + txtWand;
+    const iconWand = document.createElement('i');
+    iconWand.className = "fa-solid fa-wand-sparkles";
+    const txtWand = wand.wood ? wand.wood + ", " + wand.core + ", " + wand.length + " pulgadas" : "No tiene";
+    const textoWand = " Varita: " + txtWand;
+    cardWand.append(iconWand, textoWand);
+
+    const cardPatronus = document.createElement('p');
+    const iconPatronus = document.createElement('i');
+    iconPatronus.className = "fa-solid fa-ghost";
 
     const txtPatronus = patronus ? patronus: "No tiene";
-    const cardPatronus = document.createElement('p');
-    cardPatronus.textContent = 'Patronus: ' + txtPatronus;
+    const textPatronus = ' Patronus: ' + txtPatronus;
+    cardPatronus.append(iconPatronus, textPatronus);
 
+    const txtHouse = (house != '') ? house: "Sin casa"
     const cardHouse = document.createElement('h5');
-    cardHouse.textContent = house;
+    cardHouse.textContent = txtHouse;
     cardHouse.classList.add('card-house');
      
     //Botón de favorito 

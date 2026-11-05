@@ -40,6 +40,7 @@ header p{
 }
 
 nav{
+    font-family: 'Fauna One', serif;
     font-size: 30px;
 }
 
@@ -50,11 +51,16 @@ nav a{
 /* ------------------------- Main ------------------------ */
 main{
     font-family: 'Fauna One', serif;
+    font-size: 20px;
     line-height: 1.6;
     color: #9b9a9a;
     background-color: #070331;
     padding-top: 20px;
     padding-left: 50px ;
+}
+
+body {
+    font-family: 'Fauna One', serif;
 }
 
 h1, h2, h3{
@@ -85,6 +91,7 @@ h5{
     border: 1px solid #1114cf;
     border-radius: 15px;
     background-color: #737a05;
+    padding: 3px;
 }
 
 /* -------------- Contenedor de los filtros ----------------*/
@@ -115,6 +122,12 @@ h5{
     padding: 8px 40px 8px 10px;
 }
 
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
 .search-container i {
     display: flex;
     align-items: center;
@@ -131,6 +144,27 @@ h5{
     padding: 8px;
 } 
 
+/* ---------------------- Paginación ---------------------- */
+#pagination {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center;     /* Los alinea verticalmente */
+    gap: 30px;                /* Separación entre los elementos */
+    width: 100%;
+    margin: 30px auto;
+    font-size: 20px;
+}
+
+#pagination button {
+    font-size: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+#pagination p {
+    margin: 0;
+}
+
 /* ---------------------- Contenedor del catálogo ---------------*/
 #catalog-section {
     display: flex;
@@ -141,10 +175,12 @@ h5{
     gap: 20px;
     width: 100%;
     margin-top: 20px;
+    padding-bottom: 40px;
 }
 
 /* Tarjeta de cada personaje */
 .card-character {
+    font-family: 'Fauna One', serif;
     display: flex;
     flex-direction: column;
     flex: 0 0 380px;
@@ -169,13 +205,8 @@ h5{
     object-fit: contain;
 }
 
-/* #favorite-section .card-character .card-name {
-    margin-top: 1px;
-    text-align: center;
-} */
-
 #catalog-section .card-character p {
-    font-size: 16px;
+    font-size: 12px;
 }
 
 /* Botón de favoritos */
@@ -213,17 +244,113 @@ footer{
     font-size: 20px;
 }
 
+/* ------------- Ocultar botón en portátil --------- */
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #b9d612;
+    font-size: 30px;
+    cursor: pointer;
+}
+
 /* ---------------------------------------------------- */
 /* -----------------Página para móviles --------------- */
 /* ---------------------------------------------------- */
-@media (max-width: 600px) {
+@media screen and (max-width: 768px) {
+
+    /* Header */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px;
+    }
+
+    /* Título */
+    h1 {
+        font-size: 25px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    /* Navegación */
+    nav {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    /* Mostrar hamburguesa */
+    #menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    /* Menú oculto inicialmente */
+    header ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 15px;
+        padding-top: 20px;
+    }
+
+    /* Menú desplegado */
+    header ul.active {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 20px;
+    }
+
+    /* Adaptar catálogo */
+    main {
+        padding: 20px;
+    }
+
+    /* Adaptar filtros */
+    #filters-section {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #filter-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #name-input,
+    #house-select {
+        width: 100%;
+    }
+
+    /* Adaptar paginación */
+    #pagination {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    #pagination button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Adaptar tarjetas */
     #catalog-section {
         justify-content: center;
     }
 
     .card-character {
-        width: 100%;
-        max-width: 280px;
+        flex: 0 1 100%;
+        max-width: 380px;
+    }
+
+    footer {
+        padding: 25px;
+        font-size: 14px;
     }
 }
 
