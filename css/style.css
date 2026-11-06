@@ -58,7 +58,7 @@ main{
     line-height: 1.6;
     color: var(--color-text);
     background-color: var(--color-main);
-    padding-top: 20px;
+    padding-top: 10px;
     padding-left: 50px ;
 }
 
@@ -97,8 +97,8 @@ h4{
     display: grid;
     grid-template-columns: repeat(2,2fr);
     gap: 40px;   
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 10px;
+    padding-bottom: 30px;
     padding-right: 60px;
 }
 

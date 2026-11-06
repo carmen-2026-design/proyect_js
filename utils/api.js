@@ -15,7 +15,7 @@ async function fetchData(url){
             data: result
         }
 
-    }catch{
+    }catch(error){
         console.error(error);ç
         return{
             error: error,
